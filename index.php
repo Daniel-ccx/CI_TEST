@@ -56,7 +56,7 @@ if (defined('ENVIRONMENT'))
  * as this file.
  *
  */
-	$system_path = 'system';
+	$system_path = '../appmine/ci/system';
 
 /*
  *---------------------------------------------------------------
@@ -98,6 +98,8 @@ if (defined('ENVIRONMENT'))
 	// if your controller is not in a sub-folder within the "controllers" folder
 
 if(strpos($_SERVER['REQUEST_URI'], '/admin') !== false)
+	$routing['directory'] = 'admin';
+else if(strpos($_SERVER['REQUEST_URI'], '/api/') !== false)
 	$routing['directory'] = 'admin';
 else
 	$routing['directory'] = 'front';
