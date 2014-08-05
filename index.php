@@ -97,10 +97,10 @@ if (defined('ENVIRONMENT'))
 	// The directory name, relative to the "controllers" folder.  Leave blank
 	// if your controller is not in a sub-folder within the "controllers" folder
 
-if(strpos($_SERVER['REQUEST_URI'], '/admin') !== false)
+if(strpos($_SERVER['REQUEST_URI'], '/admin/') !== false)
 	$routing['directory'] = 'admin';
 else if(strpos($_SERVER['REQUEST_URI'], '/api/') !== false)
-	$routing['directory'] = 'admin';
+	$routing['directory'] = 'api';
 else
 	$routing['directory'] = 'front';
 	// The controller class file name.  Example:  Mycontroller
